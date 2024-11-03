@@ -54,10 +54,10 @@ server:
 
 - [Llama 3.2 Model Library](https://ollama.com/library/llama3.2:1b)
 
-- ![Llama 3.2 chat](1.jpg)
-- ![Model info](2.jpg)
-- ![Pulling and starting Llama 3.2 model based server](3.jpg)
-- ![Llama 3.2 Chat](4.jpg)
+- ![Llama 3.2 chat](1.png)
+- ![Model info](2.png)
+- ![Pulling and starting Llama 3.2 model based server](3.png)
+- ![Llama 3.2 Chat](4.png)
 
 ---
 
