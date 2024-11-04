@@ -16,6 +16,7 @@ Supported Languages: English, German, French, Italian, Portuguese, Hindi, Spanis
 This template currently uses the **Llama 3.2 - 1B** model by default, but other models can be integrated as required.
 
 You can use any of the model as per your system and requirement from **https://ollama.com/library/llama3.2/tags**
+
 ---
 
 ## Features
