@@ -31,7 +31,7 @@ def query_llama(prompt):
         return "There was an error processing your request."
 
 # Streamlit app UI
-st.title("Llama 3.2 1B Smalles LLM Based Chat Running on CPU")
+st.title("Llama 3.2 1B Smalles LLM Model Chat")
 
 # Streamlined input and response display
 user_input = st.text_input("Ask something:")
