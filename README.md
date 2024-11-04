@@ -69,12 +69,18 @@ server:
 
 - [Llama 3.2 Model Library](https://ollama.com/library/llama3.2:1b)
 
-- ![Llama 3.2 chat](1.png)
-- ![Model info](2.png)
-- ![Pulling and starting Llama 3.2 model based server](3.png)
-- ![Llama 3.2 Chat](4.png)
-- ![Llama 3.2 Hindi Chat](5.png)
-- ![Llama 3.2 Hindi Translation Chat](6.png)
+- ![Llama 3.2 chat](images/1.png)
+- ![Model info](images/2.png)
+- ![Pulling and starting Llama 3.2 model based server](images/3.png)
+- ![Llama 3.2 Chat](images/4.png)
+- ![Llama 3.2 Hindi Chat](images/5.png)
+- ![Llama 3.2 Hindi Translation Chat](images/6.png)
+- ![Llama 3.2 Hindi Translation Chat](images/7.png)
+- ![Llama 3.2 Python REST Server Structure Chat](images/8.png)
+- ![Llama 3.2 Python REST Server Structure Chat](images/9.png)
+- ![Llama 3.2 Python REST Server Structure Chat](images/10.png)
+- ![Llama 3.2 Hindi to English Google Translation](images/11.png)
+- ![Llama 3.2 Hindi to English This Chatbot Translation](images/12.png)
 ---
 
 ## Contributing
