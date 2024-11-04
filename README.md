@@ -92,3 +92,10 @@ For larger changes, please open an issue to discuss your proposal first.
 
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+LLAMA 3.2 COMMUNITY LICENSE AGREEMENT
+Llama 3.2 Version Release Date: September 25, 2024
+
+“Agreement” means the terms and conditions for use, reproduction, distribution and modification of the Llama Materials set forth herein.
+
+“Documentation” means the specifications, manuals and documentation accompanying Llama 3.2 distributed by Meta at https://llama.meta.com/doc/overview.
