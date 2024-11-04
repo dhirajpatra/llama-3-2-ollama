@@ -74,7 +74,7 @@ server:
 - ![Pulling and starting Llama 3.2 model based server](3.png)
 - ![Llama 3.2 Chat](4.png)
 - ![Llama 3.2 Hindi Chat](5.png)
-- ![Llama 3.2 Hindi Translation Chat](5.png)
+- ![Llama 3.2 Hindi Translation Chat](6.png)
 ---
 
 ## Contributing
