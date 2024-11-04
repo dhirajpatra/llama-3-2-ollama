@@ -2,10 +2,20 @@
 
 ## Overview
 
-`llama-stack-app` is a Docker Compose-based template for developing applications using the Llama model. This setup allows for rapid prototyping and deployment of applications such as conversational bots or copilots, with built-in support for Retrieval-Augmented Generation (RAG).
+`llama-stack-app` is a Docker Compose-based template for developing applications using the Llama model using ollama. This setup allows for rapid prototyping and deployment of applications such as conversational bots or copilots, with built-in support for Retrieval-Augmented Generation (RAG).
+
+The 3B model outperforms the Gemma 2 2.6B and Phi 3.5-mini models on tasks such as:
+
+Following instructions
+Summarization
+Prompt rewriting
+Tool use
+
+Supported Languages: English, German, French, Italian, Portuguese, Hindi, Spanish, and Thai are officially supported. Llama 3.2 has been trained on a broader collection of languages than these 8 supported languages.
 
 This template currently uses the **Llama 3.2 - 1B** model by default, but other models can be integrated as required.
 
+You can use any of the model as per your system and requirement from **https://ollama.com/library/llama3.2/tags**
 ---
 
 ## Features
@@ -26,6 +36,11 @@ Clone the repository, navigate to the directory, and run:
 
 ```bash
 docker-compose up --build --remove-orphans
+```
+
+To keep your Docker space clean in local can use the below command
+```bash
+docker images -f dangling=true | awk '{print $3}' | xargs docker image rm
 ```
 
 This command will build and run all required services defined in the Docker Compose file. First time it may take several minutes depends on the system and internet speed. As it will pull down the llama model and then can start the service.
@@ -58,7 +73,8 @@ server:
 - ![Model info](2.png)
 - ![Pulling and starting Llama 3.2 model based server](3.png)
 - ![Llama 3.2 Chat](4.png)
-
+- ![Llama 3.2 Hindi Chat](5.png)
+- ![Llama 3.2 Hindi Translation Chat](5.png)
 ---
 
 ## Contributing
