@@ -38,9 +38,7 @@ services:
       resources:
         limits:
           cpus: '2.00'
-          memory: 16G  # Increase memory allocation
-        reservations:
-          memory: 12G  # Reserve memory for Ollama
+          memory: 8G  # Increase memory allocation
 
 volumes:
   pdf_storage:
