@@ -3,6 +3,7 @@ import streamlit as st
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
 
+# MODEL = "llama3.2:1b"
 MODEL = "llama3.2:1b"
 
 # Set up a session for optimized HTTP requests
@@ -23,7 +24,7 @@ def query_llama(prompt):
     }
 
     try:
-        response = session.post(url, headers=headers, json=data, timeout=120)
+        response = session.post(url, headers=headers, json=data, timeout=300)
         response.raise_for_status()  # Ensure a successful response
         return response.json().get("message", {}).get("content", "No response")
     except requests.exceptions.RequestException as e:
