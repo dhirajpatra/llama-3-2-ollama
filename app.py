@@ -2,9 +2,13 @@ import requests
 import streamlit as st
 from requests.adapters import HTTPAdapter
 from requests.packages.urllib3.util.retry import Retry
+from PIL import Image
+import io
+import base64
+from typing import Union
 
 # MODEL = "llama3.2:1b"
-MODEL = "llama3.2:1b"
+MODEL = "llama3.2-vision"
 
 # Set up a session for optimized HTTP requests
 session = requests.Session()
@@ -12,7 +16,17 @@ retries = Retry(total=3, backoff_factor=0.5, status_forcelist=[429, 500, 502, 50
 session.mount("http://", HTTPAdapter(max_retries=retries))
 
 # API call to the Llama model via Ollama
-def query_llama(prompt):
+def query_llama(prompt: str, image: Union[bytes, None] = None) -> str:
+    """
+    Queries the Llama model via Ollama API.
+
+    Args:
+    - prompt (str): User input text.
+    - image (bytes, optional): Image file bytes. Defaults to None.
+
+    Returns:
+    - str: Response from the Llama model.
+    """
     url = "http://ollama:11434/api/chat"
     headers = {"Content-Type": "application/json"}
     data = {
@@ -23,6 +37,11 @@ def query_llama(prompt):
         "stream": False
     }
 
+    if image:
+        # Encode image to base64
+        encoded_image = base64.b64encode(image).decode("utf-8")
+        data["messages"][0]["content"] += f"\n\nImage: data:image/jpeg;base64,{encoded_image}"
+
     try:
         response = session.post(url, headers=headers, json=data, timeout=300)
         response.raise_for_status()  # Ensure a successful response
@@ -32,11 +51,21 @@ def query_llama(prompt):
         return "There was an error processing your request."
 
 # Streamlit app UI
-st.title("Llama 3.2 1B Smalles LLM Model Chat")
+st.title("Llama 3.2 Vision 11B LLM Model Chat")
 
-# Streamlined input and response display
+# Input fields
 user_input = st.text_input("Ask something:")
-if st.button("Send") and user_input:
+image_file = st.file_uploader("Upload an image:", type=["jpg", "jpeg", "png"])
+
+# Send button with input validation
+if st.button("Send") and (user_input or image_file):
     with st.spinner("Generating response..."):
-        answer = query_llama(user_input)
+        # Convert uploaded image to bytes
+        image_bytes = image_file.read() if image_file else None
+
+        answer = query_llama(user_input, image_bytes)
         st.write(answer)
+
+        # Display uploaded image
+        if image_file:
+            st.image(image_file)
