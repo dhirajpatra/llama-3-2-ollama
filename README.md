@@ -4,6 +4,8 @@
 
 `llama-stack-app` is a Docker Compose-based template for developing applications using the Llama model using ollama. This setup allows for rapid prototyping and deployment of applications such as conversational bots or copilots, with built-in support for Retrieval-Augmented Generation (RAG).
 
+You can pull vision branch for vision multimodal model.
+
 The 3B model outperforms the Gemma 2 2.6B and Phi 3.5-mini models on tasks such as:
 
 Following instructions
