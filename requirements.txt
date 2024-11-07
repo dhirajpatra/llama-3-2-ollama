@@ -1,2 +1,8 @@
 streamlit
 requests
+ollama
+unstructured[docx] 
+langchain 
+langchainhub 
+langchain_community 
+langchain-chroma
