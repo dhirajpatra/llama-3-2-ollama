@@ -14,11 +14,11 @@ done
 echo "Ollama server is running."
 
 # Check if the model already exists
-# MODEL_PATH="/root/.ollama/models/llama3.2:1b"
-MODEL_PATH='/root/.ollama/models/llama3.2-vision
+MODEL_PATH="/root/.ollama/models/llama3.2-vision"
+# MODEL_PATH='/root/.ollama/models/llama3.2-vision
 if [ ! -d "$MODEL_PATH" ]; then
   echo "Model not found. Pulling model..."
-  ollama pull llama3.2:1b
+  ollama pull llama3.2-vision
 else
   echo "Model already exists. Skipping pull."
 fi

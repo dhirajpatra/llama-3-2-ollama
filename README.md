@@ -46,10 +46,12 @@ docker images -f dangling=true | awk '{print $3}' | xargs docker image rm
 
 This command will build and run all required services defined in the Docker Compose file. First time it may take several minutes depends on the system and internet speed. As it will pull down the llama model and then can start the service.
 
+llama3.2-vision model requires GPU and at least 32 GB RAM
+
 ---
 
 ## Configuration
-You can configure the model and server settings in the `llama_config.yaml` file. Example settings include:
+You can create one configure the model and server settings in the `llama_config.yaml` file. Example settings include:
 
 ```yaml
 # Configuration for running Llama model
@@ -108,4 +110,8 @@ Llama 3.2 Version Release Date: September 25, 2024
 “Documentation” means the specifications, manuals and documentation accompanying Llama 3.2 distributed by Meta at https://llama.meta.com/doc/overview.
 
 https://ollama.com/blog/llama3.2
+
+https://hub.docker.com/r/ollama/ollama
+
+
 

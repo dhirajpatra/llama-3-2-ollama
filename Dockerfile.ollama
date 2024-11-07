@@ -1,5 +1,5 @@
 # Start from the official ollama image
-FROM ollama/ollama:latest
+FROM ollama/ollama
 
 # Install curl and any other dependencies
 RUN apt-get update && apt-get install -y curl && apt-get clean && rm -rf /var/lib/apt/lists/*

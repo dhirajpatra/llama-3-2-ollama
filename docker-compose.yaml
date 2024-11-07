@@ -21,7 +21,7 @@ services:
       resources:
         limits:
           cpus: '2.00'
-          memory: 4G
+          memory: 2G
 
   ollama:
     build:
@@ -38,7 +38,9 @@ services:
       resources:
         limits:
           cpus: '2.00'
-          memory: 8G
+          memory: 16G  # Increase memory allocation
+        reservations:
+          memory: 12G  # Reserve memory for Ollama
 
 volumes:
   pdf_storage:
