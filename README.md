@@ -106,3 +106,6 @@ Llama 3.2 Version Release Date: September 25, 2024
 “Agreement” means the terms and conditions for use, reproduction, distribution and modification of the Llama Materials set forth herein.
 
 “Documentation” means the specifications, manuals and documentation accompanying Llama 3.2 distributed by Meta at https://llama.meta.com/doc/overview.
+
+https://ollama.com/blog/llama3.2
+

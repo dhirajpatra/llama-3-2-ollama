@@ -23,7 +23,7 @@ def query_llama(prompt):
     }
 
     try:
-        response = session.post(url, headers=headers, json=data, timeout=60)
+        response = session.post(url, headers=headers, json=data, timeout=120)
         response.raise_for_status()  # Ensure a successful response
         return response.json().get("message", {}).get("content", "No response")
     except requests.exceptions.RequestException as e:
