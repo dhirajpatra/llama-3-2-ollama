@@ -19,6 +19,16 @@ You can use any of the model as per your system and requirement from **https://o
 
 ---
 
+## Branches
+
+This repository has three different branches main, chain and vision. 
+
+- Main is the simplisting form of Chatbot which you can start to translate or other kind of chat.
+- Chain is conversational AI bot with LangChain. You can add with RAG process easily. 
+- Vision is for chat about the image you uploaded into the chat.
+
+---
+
 ## Features
 - **RAG Provision**: Prepared to extend with RAG capabilities to enhance answer accuracy and relevance by combining model outputs with external document retrieval.
 - **Scalable Architecture**: Uses Docker Compose for scalable and isolated development.
@@ -108,4 +118,6 @@ Llama 3.2 Version Release Date: September 25, 2024
 “Documentation” means the specifications, manuals and documentation accompanying Llama 3.2 distributed by Meta at https://llama.meta.com/doc/overview.
 
 https://ollama.com/blog/llama3.2
+
+https://www.promptingguide.ai/
 
