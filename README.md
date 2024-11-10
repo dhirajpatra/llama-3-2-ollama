@@ -4,8 +4,6 @@
 
 `llama-stack-app` is a Docker Compose-based template for developing applications using the Llama model using ollama. This setup allows for rapid prototyping and deployment of applications such as conversational bots or copilots, with built-in support for Retrieval-Augmented Generation (RAG).
 
-You can pull vision branch for vision multimodal model.
-
 The 3B model outperforms the Gemma 2 2.6B and Phi 3.5-mini models on tasks such as:
 
 Following instructions
@@ -18,6 +16,16 @@ Supported Languages: English, German, French, Italian, Portuguese, Hindi, Spanis
 This template currently uses the **Llama 3.2 - 1B** model by default, but other models can be integrated as required.
 
 You can use any of the model as per your system and requirement from **https://ollama.com/library/llama3.2/tags**
+
+---
+
+## Branches
+
+This repository has three different branches main, chain and vision. 
+
+- Main is the simplisting form of Chatbot which you can start to translate or other kind of chat.
+- Chain is conversational AI bot with LangChain. You can add with RAG process easily. 
+- Vision is for chat about the image you uploaded into the chat.
 
 ---
 
@@ -48,12 +56,10 @@ docker images -f dangling=true | awk '{print $3}' | xargs docker image rm
 
 This command will build and run all required services defined in the Docker Compose file. First time it may take several minutes depends on the system and internet speed. As it will pull down the llama model and then can start the service.
 
-llama3.2-vision model requires GPU and at least 32 GB RAM
-
 ---
 
 ## Configuration
-You can create one configure the model and server settings in the `llama_config.yaml` file. Example settings include:
+You can configure the model and server settings in the `llama_config.yaml` file. Example settings include:
 
 ```yaml
 # Configuration for running Llama model
@@ -113,7 +119,5 @@ Llama 3.2 Version Release Date: September 25, 2024
 
 https://ollama.com/blog/llama3.2
 
-https://hub.docker.com/r/ollama/ollama
-
-
+https://www.promptingguide.ai/
 
